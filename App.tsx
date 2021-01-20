@@ -19,15 +19,15 @@ const App: React.FC = () => {
   const [isReady, setIsReady] = React.useState(false);
 
   React.useEffect(() => {
-    const loadFonts = async () =>
+    const loadFonts = async () => {
       await Font.loadAsync({
         Roboto: require('native-base/Fonts/Roboto.ttf'),
         Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
         ...Ionicons.font,
       });
-
+      setIsReady(true);
+    };
     loadFonts();
-    setIsReady(true);
   }, []);
 
   return isReady ? (
