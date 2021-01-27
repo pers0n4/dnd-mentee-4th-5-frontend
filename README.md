@@ -2,6 +2,8 @@
 
 - [Project Structure](#project-structure)
 - [Coding Conventions](#coding-conventions)
+- [Commit Conventions](#commit-conventions)
+- [Branching Model](#branching-model)
 - [Contributing](#contributing)
 
 ## Project Structure
@@ -35,16 +37,11 @@ Commit message 규칙은 [Conventional Commits](https://www.conventionalcommits.
 
 ## Branching Model
 
-- main: 서비스를 배포하는 브랜치
-- develop: 개발을 진행하는 브랜치
-- feature: 기능을 추가하는 브랜치
-- fix: 기능을 수정하는 브랜치
-
-Branching model은 [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)를 기준으로 `main`, `develop`, `feature`, `fix` 등의 branch 사용
+[Github flow](https://guides.github.com/introduction/flow/)를 따라 `main`을 중심으로 각각의 이슈, 기능과 관련된 branch를 생성해서 작업 진행
 
 ## Contributing
 
-코드 병합은 그룹 소유의 해당 저장소를 `upstream`으로 두고, upstream을 clone한 개인 소유의 `origin`에서 추가한 `feature`, `fix` 등의 branch를 upstream의 `develop` 브랜치에 `Pull Request`로 반영 (`origin/(feautre|fix)` => `upstream/develop`)
+그룹 소유의 저장소를 `upstream`으로 두고, upstream을 fork한 개인 소유의 `origin`에서 생성한 branch를 GitHub `Pull Request`로 upstream에 반영 (`origin/...` => `upstream/main`)
 
 ## 5조 - 5늘 술사줘
 
