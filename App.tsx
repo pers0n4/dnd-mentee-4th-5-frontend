@@ -1,9 +1,14 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 
-import Navigation from './src/navigations';
+import BottomNavigator from './src/molecules/BottomNavigator';
 
 const App: React.FC = () => {
-  return <Navigation />;
+  return (
+    <NavigationContainer>
+      <BottomNavigator />
+    </NavigationContainer>
+  );
 };
 
 export default App;
