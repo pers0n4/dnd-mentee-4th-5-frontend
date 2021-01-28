@@ -2,13 +2,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
-import HomeScreen from '../screens/Home';
-import ShowcaseScreen from '../screens/Showcase';
-import WishlistScreen from '../screens/Wishlist';
+import HomeScreen from '../../screens/Home';
+import ShowcaseScreen from '../../screens/Showcase';
+import WishlistScreen from '../../screens/Wishlist';
 
 const Tab = createBottomTabNavigator();
 
-const AppNavigation: React.FC = () => {
+const BottomNavigator: React.FC = () => {
   return (
     <Tab.Navigator tabBarOptions={{ showLabel: false }}>
       <Tab.Screen
@@ -45,4 +45,4 @@ const AppNavigation: React.FC = () => {
   );
 };
 
-export default AppNavigation;
+export default BottomNavigator;
