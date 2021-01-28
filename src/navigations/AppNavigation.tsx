@@ -10,26 +10,35 @@ const Tab = createBottomTabNavigator();
 
 const AppNavigation: React.FC = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator tabBarOptions={{ showLabel: false }}>
       <Tab.Screen
         name="홈"
         component={HomeScreen}
         options={{
-          tabBarIcon: () => <Ionicons name="home" size={24} />,
+          tabBarIcon: ({ focused }) => (
+            <Ionicons name={focused ? 'home' : 'home-outline'} size={24} />
+          ),
         }}
       />
       <Tab.Screen
         name="즐겨찾기"
         component={WishlistScreen}
         options={{
-          tabBarIcon: () => <Ionicons name="barcode" size={24} />,
+          tabBarIcon: ({ focused }) => (
+            <Ionicons name={focused ? 'star' : 'star-outline'} size={24} />
+          ),
         }}
       />
       <Tab.Screen
         name="술 진열장"
         component={ShowcaseScreen}
         options={{
-          tabBarIcon: () => <Ionicons name="albums" size={24} />,
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={focused ? 'file-tray' : 'file-tray-outline'}
+              size={24}
+            />
+          ),
         }}
       />
     </Tab.Navigator>
