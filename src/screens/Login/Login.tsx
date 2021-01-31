@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const LoginScreen: React.FC = () => {
+const Login: React.FC = () => {
   return (
     <View style={styles.container}>
       <LoginForm />
@@ -20,4 +20,4 @@ const LoginScreen: React.FC = () => {
   );
 };
 
-export default LoginScreen;
+export default Login;
