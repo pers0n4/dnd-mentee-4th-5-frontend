@@ -59,6 +59,7 @@ const RegisterForm: React.FC = () => {
       />
       <View style={{ marginTop: 28 }}>
         <Button
+          // TODO: Next 버튼 누를 때 자체 validation
           onPress={() => Alert.alert('Title', JSON.stringify(state))}
           title="Next"
         />
