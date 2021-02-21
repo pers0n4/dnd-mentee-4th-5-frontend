@@ -1,6 +1,8 @@
+import { useNavigation } from '@react-navigation/core';
 import React from 'react';
-import { Alert, Button, View } from 'react-native';
+import { View } from 'react-native';
 
+import Button from '../../atoms/Button';
 import TextField from '../../molecules/TextField';
 
 type State = {
@@ -18,6 +20,8 @@ const initialState: State = {
 };
 
 const LoginForm: React.FC = () => {
+  const navigation = useNavigation();
+
   const [state, dispatch] = React.useReducer((state: State, action: Action) => {
     switch (action.type) {
       case 'username':
@@ -28,25 +32,32 @@ const LoginForm: React.FC = () => {
   }, initialState);
 
   return (
-    <View style={{ width: '70%' }}>
-      <TextField
-        label="Username"
-        onChangeText={(text) => dispatch({ type: 'username', payload: text })}
-        placeholder="사용자명"
-        type="username"
-        value={state.username}
-      />
-      <TextField
-        label="Password"
-        onChangeText={(text) => dispatch({ type: 'password', payload: text })}
-        placeholder="비밀번호"
-        type="password"
-        value={state.password}
-      />
-      <View style={{ marginTop: 28 }}>
+    <View style={{ flex: 1 }}>
+      <View style={{ flex: 1 }}>
+        <TextField
+          label="Username"
+          onChangeText={(text) => dispatch({ type: 'username', payload: text })}
+          placeholder="사용자명"
+          type="username"
+          value={state.username}
+        />
+        <TextField
+          label="Password"
+          onChangeText={(text) => dispatch({ type: 'password', payload: text })}
+          placeholder="비밀번호"
+          type="password"
+          value={state.password}
+        />
+      </View>
+      <View style={{ marginVertical: 32 }}>
         <Button
-          onPress={() => Alert.alert('Title', JSON.stringify(state))}
-          title="LOGIN"
+          title="콜리 시작하기"
+          onPress={() => navigation.navigate('Main')}
+        />
+        <Button
+          title="회원가입하기"
+          onPress={() => navigation.navigate('Register')}
+          backgroundColor="transparent"
         />
       </View>
     </View>
