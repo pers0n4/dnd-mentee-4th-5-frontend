@@ -1,33 +1,39 @@
-import { css } from '@emotion/native';
+import styled from '@emotion/native';
 import { useTheme } from '@emotion/react';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { StyleProp, Text, ViewStyle } from 'react-native';
 
-const PageTitle: React.FC = ({ children }) => {
+const Container = styled.View({
+  flexDirection: 'row',
+});
+
+interface Props {
+  children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}
+
+const PageTitle: React.FC<Props> = ({ children, style }) => {
   const { colors } = useTheme();
+
   return (
-    <View
-      style={css`
-        flex-direction: row;
-      `}
-    >
+    <Container style={style}>
       <Text
-        style={css`
-          color: ${colors.text};
-          font-size: 24px;
-        `}
+        style={{
+          color: colors.text,
+          fontSize: 24,
+        }}
       >
         {children}
       </Text>
       <Text
-        style={css`
-          color: ${colors.primary};
-          font-size: 24px;
-        `}
+        style={{
+          color: colors.primary,
+          fontSize: 24,
+        }}
       >
         .
       </Text>
-    </View>
+    </Container>
   );
 };
 
