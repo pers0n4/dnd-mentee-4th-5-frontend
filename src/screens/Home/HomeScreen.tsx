@@ -4,16 +4,16 @@ import { Text } from 'react-native';
 
 import ThemeView from '../../templates/ThemeView';
 
-const MyPageScreen: React.FC = () => {
+const HomeScreen: React.FC = () => {
   return (
     <ThemeView
       style={css`
         flex: 1;
       `}
     >
-      <Text>검색</Text>
+      <Text>홈</Text>
     </ThemeView>
   );
 };
 
-export default MyPageScreen;
+export default HomeScreen;

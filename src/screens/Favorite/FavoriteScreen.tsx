@@ -1,19 +1,19 @@
 import { css } from '@emotion/native';
 import React from 'react';
-import { Text } from 'react-native';
 
+import PageTitle from '../../atoms/PageTitle';
 import ThemeView from '../../templates/ThemeView';
 
-const MyPageScreen: React.FC = () => {
+const FavoriteScreen: React.FC = () => {
   return (
     <ThemeView
       style={css`
         flex: 1;
       `}
     >
-      <Text>검색</Text>
+      <PageTitle>콜리스트</PageTitle>
     </ThemeView>
   );
 };
 
-export default MyPageScreen;
+export default FavoriteScreen;
