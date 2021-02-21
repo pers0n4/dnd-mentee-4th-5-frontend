@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 
 import BottomNavigator from './src/molecules/BottomNavigator';
+import StackNavigator from './src/molecules/StackNavigator';
 
 declare module '@emotion/react' {
   interface Theme {
@@ -30,7 +31,8 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        <BottomNavigator />
+        {/* <BottomNavigator /> */}
+        <StackNavigator />
       </NavigationContainer>
     </ThemeProvider>
   );
