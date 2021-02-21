@@ -2,9 +2,11 @@ import styled from '@emotion/native';
 import React from 'react';
 import { ViewProps } from 'react-native';
 
-const Container = styled.View`
-  background-color: ${({ theme }) => theme.colors.background};
-`;
+const Container = styled.View(({ theme }) => ({
+  paddingHorizontal: 32,
+  paddingVertical: 16,
+  backgroundColor: theme.colors.background,
+}));
 
 interface Props extends ViewProps {}
 
