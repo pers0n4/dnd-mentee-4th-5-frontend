@@ -1,10 +1,16 @@
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import { Alert, Image, View } from 'react-native';
+import { Image, View } from 'react-native';
 
 import Button from '../../atoms/Button';
+import { StackParamList } from '../../molecules/StackNavigator';
 import ThemeView from '../../templates/ThemeView';
 
-const First: React.FC = () => {
+interface Props {
+  navigation: StackNavigationProp<StackParamList, 'First'>;
+}
+
+const First: React.FC<Props> = ({ navigation }) => {
   return (
     <ThemeView
       style={{
@@ -34,10 +40,13 @@ const First: React.FC = () => {
           justifyContent: 'space-between',
         }}
       >
-        <Button title="콜리 시작하기" onPress={() => Alert.alert('시작하기')} />
+        <Button
+          title="콜리 시작하기"
+          onPress={() => navigation.navigate('Login')}
+        />
         <Button
           title="회원가입하기"
-          onPress={() => Alert.alert('회원가입')}
+          onPress={() => navigation.navigate('Register')}
           backgroundColor="transparent"
         />
       </View>
