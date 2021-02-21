@@ -23,7 +23,7 @@ const theme = {
     ...DarkTheme.colors,
     primary: '#ff8077',
     secondary: '#95a4d6',
-    background: '#000',
+    background: 'rgb(28, 28, 30)',
     card: 'rgb(215, 169, 173)',
     text: '#fff',
     border: 'rgb(87, 82, 95)',
