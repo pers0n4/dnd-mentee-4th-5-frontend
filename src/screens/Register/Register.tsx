@@ -1,22 +1,19 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
 
+import PageTitle from '../../atoms/PageTitle';
 import RegisterForm from '../../organisms/RegisterForm/RegisterForm';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import ThemeView from '../../templates/ThemeView';
 
 const Register: React.FC = () => {
   return (
-    <View style={styles.container}>
+    <ThemeView
+      style={{
+        flex: 1,
+      }}
+    >
+      <PageTitle style={{ marginBottom: 16 }}>회원가입하기</PageTitle>
       <RegisterForm />
-    </View>
+    </ThemeView>
   );
 };
 
