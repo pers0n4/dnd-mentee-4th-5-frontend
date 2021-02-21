@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
-import { NavigationContainer } from '@react-navigation/native';
+import { DarkTheme, NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 
 import BottomNavigator from './src/molecules/BottomNavigator';
@@ -10,27 +10,38 @@ declare module '@emotion/react' {
     colors: {
       primary: string;
       secondary: string;
-      accent: string;
-      text: string;
       background: string;
+      card: string;
+      text: string;
+      border: string;
     };
   }
 }
 
 const theme = {
   colors: {
-    primary: 'rgb(255, 128, 119)',
-    secondary: 'rgb(215, 169, 174)',
-    accent: 'rgb(149, 164, 214)',
-    text: '#fff',
+    ...DarkTheme.colors,
+    primary: '#ff8077',
+    secondary: '#95a4d6',
     background: '#000',
+    card: 'rgb(215, 169, 173)',
+    text: '#fff',
+    border: 'rgb(87, 82, 95)',
+  },
+};
+
+const navigationTheme = {
+  dark: true,
+  colors: {
+    ...DarkTheme.colors,
+    ...theme,
   },
 };
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <NavigationContainer>
+      <NavigationContainer theme={navigationTheme}>
         {/* <BottomNavigator /> */}
         <StackNavigator />
       </NavigationContainer>
