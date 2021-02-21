@@ -9,7 +9,9 @@ const Stack = createStackNavigator();
 
 const StackNavigator: React.FC = () => {
   return (
-    <Stack.Navigator headerMode="none">
+    <Stack.Navigator
+      screenOptions={{ headerTitle: '', animationEnabled: false }}
+    >
       <Stack.Screen name="First" component={First} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Main" component={BottomNavigator} />
