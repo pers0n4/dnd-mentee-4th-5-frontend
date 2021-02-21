@@ -66,7 +66,7 @@ const RegisterForm: React.FC = () => {
           onChangeText={(text) => dispatch({ type: 'name', payload: text })}
         />
       </View>
-      <View style={{ marginTop: 28 }}>
+      <View style={{ marginVertical: 32 }}>
         <Button
           // TODO: Next 버튼 누를 때 자체 validation
           title="콜리 시작하기"
