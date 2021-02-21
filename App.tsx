@@ -2,7 +2,6 @@ import { ThemeProvider } from '@emotion/react';
 import { DarkTheme, NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 
-import BottomNavigator from './src/molecules/BottomNavigator';
 import StackNavigator from './src/molecules/StackNavigator';
 
 declare module '@emotion/react' {
@@ -42,7 +41,6 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer theme={navigationTheme}>
-        {/* <BottomNavigator /> */}
         <StackNavigator />
       </NavigationContainer>
     </ThemeProvider>
