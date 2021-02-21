@@ -6,7 +6,14 @@ import Login from '../../screens/Login';
 import Register from '../../screens/Register';
 import BottomNavigator from '../BottomNavigator';
 
-const Stack = createStackNavigator();
+export type StackParamList = {
+  First: undefined;
+  Login: undefined;
+  Register: undefined;
+  Main: undefined;
+};
+
+const Stack = createStackNavigator<StackParamList>();
 
 const StackNavigator: React.FC = () => {
   return (
