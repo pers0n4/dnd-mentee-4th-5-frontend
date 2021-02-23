@@ -14,7 +14,12 @@ const MenuItem: React.FC<Props> = ({ text }) => {
   return (
     <TouchableHighlight
       underlayColor="rgba(255, 255, 255, 0.1)"
-      style={{ height: 80, justifyContent: 'center' }}
+      style={{
+        height: 80,
+        justifyContent: 'center',
+        marginHorizontal: -16,
+        paddingHorizontal: 16,
+      }}
       onPress={() => Alert.alert(text)}
     >
       <View
