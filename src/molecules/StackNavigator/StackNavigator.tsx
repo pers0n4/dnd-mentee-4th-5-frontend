@@ -23,7 +23,11 @@ const StackNavigator: React.FC = () => {
       <Stack.Screen name="First" component={First} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Register" component={Register} />
-      <Stack.Screen name="Main" component={BottomNavigator} />
+      <Stack.Screen
+        name="Main"
+        component={BottomNavigator}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };
