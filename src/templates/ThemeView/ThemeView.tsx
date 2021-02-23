@@ -1,4 +1,5 @@
 import styled from '@emotion/native';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ViewProps } from 'react-native';
 
@@ -11,7 +12,12 @@ const Container = styled.View(({ theme }) => ({
 interface Props extends ViewProps {}
 
 const ThemeView: React.FC<Props> = ({ children, ...props }) => {
-  return <Container {...props}>{children}</Container>;
+  return (
+    <Container {...props}>
+      <StatusBar style="inverted" />
+      {children}
+    </Container>
+  );
 };
 
 export default ThemeView;
