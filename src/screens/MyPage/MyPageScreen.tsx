@@ -1,7 +1,8 @@
 import { css } from '@emotion/native';
 import React from 'react';
-import { Text } from 'react-native';
 
+import PageTitle from '../../atoms/PageTitle';
+import MyPageMenu from '../../organisms/MyPageMenu';
 import ThemeView from '../../templates/ThemeView';
 
 const MyPageScreen: React.FC = () => {
@@ -11,7 +12,8 @@ const MyPageScreen: React.FC = () => {
         flex: 1;
       `}
     >
-      <Text>검색</Text>
+      <PageTitle style={{ marginBottom: 24 }}>콜리 설정</PageTitle>
+      <MyPageMenu />
     </ThemeView>
   );
 };
