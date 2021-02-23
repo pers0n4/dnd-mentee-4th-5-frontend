@@ -1,11 +1,12 @@
 import styled from '@emotion/native';
+import Constants from 'expo-constants';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ViewProps } from 'react-native';
 
 const Container = styled.View(({ theme }) => ({
+  paddingTop: Constants.statusBarHeight,
   paddingHorizontal: 32,
-  paddingVertical: 16,
   backgroundColor: theme.colors.background,
 }));
 
