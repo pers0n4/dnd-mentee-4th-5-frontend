@@ -2,20 +2,18 @@ import { css } from '@emotion/native';
 import React from 'react';
 
 import PageTitle from '../../atoms/PageTitle';
-import MyPageMenu from '../../organisms/MyPageMenu';
 import ThemeView from '../../templates/ThemeView';
 
-const MyPageScreen: React.FC = () => {
+const FavoriteScreen: React.FC = () => {
   return (
     <ThemeView
       style={css`
         flex: 1;
       `}
     >
-      <PageTitle style={{ marginBottom: 24 }}>콜리 설정</PageTitle>
-      <MyPageMenu />
+      <PageTitle>콜리스트</PageTitle>
     </ThemeView>
   );
 };
 
-export default MyPageScreen;
+export default FavoriteScreen;

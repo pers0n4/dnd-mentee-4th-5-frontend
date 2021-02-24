@@ -3,10 +3,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
 import { main, myPage, search, wishList } from '../../../assets/images';
+import FavoriteScreen from '../../screens/Favorite';
 import MainScreen from '../../screens/Main';
 import MyPageScreen from '../../screens/MyPage';
 import SearchScreen from '../../screens/Search';
-import WishlistScreen from '../../screens/Wishlist';
 
 const Icon = styled.Image({
   width: 23,
@@ -38,7 +38,7 @@ const BottomNavigator: React.FC = () => {
       />
       <Tab.Screen
         name="즐겨찾기"
-        component={WishlistScreen}
+        component={FavoriteScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Icon source={wishList} style={{ tintColor: color }} />

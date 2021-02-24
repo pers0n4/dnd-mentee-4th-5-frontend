@@ -1,22 +1,17 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
 
 import LoginForm from '../../organisms/LoginForm';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import ThemeView from '../../templates/ThemeView';
 
 const Login: React.FC = () => {
   return (
-    <View style={styles.container}>
+    <ThemeView
+      style={{
+        flex: 1,
+      }}
+    >
       <LoginForm />
-    </View>
+    </ThemeView>
   );
 };
 
