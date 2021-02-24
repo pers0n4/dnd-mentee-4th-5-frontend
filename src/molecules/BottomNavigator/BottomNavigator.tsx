@@ -5,8 +5,8 @@ import React from 'react';
 import { favorite, home, myPage, search } from '../../../assets/navigation';
 import FavoriteScreen from '../../screens/Favorite';
 import HomeScreen from '../../screens/Home';
-import MyPageScreen from '../../screens/MyPage';
 import SearchScreen from '../../screens/Search';
+import MyPageNavigator from '../MyPageNavigator';
 
 const Icon = styled.Image({
   width: 23,
@@ -56,7 +56,7 @@ const BottomNavigator: React.FC = () => {
       />
       <Tab.Screen
         name="마이페이지"
-        component={MyPageScreen}
+        component={MyPageNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <Icon source={myPage} style={{ tintColor: color }} />
