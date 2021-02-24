@@ -7,7 +7,7 @@ import ThemeView from '../../templates/ThemeView';
 const MyPageScreen: React.FC = () => {
   return (
     <ThemeView>
-      <PageTitle style={{ marginBottom: 24 }}>콜리 설정</PageTitle>
+      <PageTitle>콜리 설정</PageTitle>
       <MyPageMenu />
     </ThemeView>
   );

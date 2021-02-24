@@ -16,7 +16,7 @@ const PageTitle: React.FC<Props> = ({ children, style }) => {
   const { colors } = useTheme();
 
   return (
-    <Container style={style}>
+    <Container style={{ marginVertical: 24, ...(style as object) }}>
       <Text
         style={{
           color: colors.text,
