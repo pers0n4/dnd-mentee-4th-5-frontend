@@ -15,7 +15,10 @@ const MyPageMenu: React.FC = () => {
       />
       <MenuItem text="개인정보 취급 방침" />
       <MenuItem text="콜리 이용약관" />
-      <MenuItem text="콜리 계정 탈퇴" />
+      <MenuItem
+        text="콜리 계정 탈퇴"
+        onPress={() => navigation.navigate('DeleteAccount')}
+      />
     </View>
   );
 };
