@@ -2,7 +2,6 @@ import styled from '@emotion/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
-import { favorite, home, myPage, search } from '../../../assets/navigation';
 import FavoriteScreen from '../../screens/Favorite';
 import HomeScreen from '../../screens/Home';
 import SearchScreen from '../../screens/Search';
@@ -32,7 +31,10 @@ const BottomNavigator: React.FC = () => {
         component={HomeScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={home} style={{ tintColor: color }} />
+            <Icon
+              source={require('../../../assets/navigation/home.svg')}
+              style={{ tintColor: color }}
+            />
           ),
         }}
       />
@@ -41,7 +43,10 @@ const BottomNavigator: React.FC = () => {
         component={FavoriteScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={favorite} style={{ tintColor: color }} />
+            <Icon
+              source={require('../../../assets/navigation/favorite.svg')}
+              style={{ tintColor: color }}
+            />
           ),
         }}
       />
@@ -50,7 +55,10 @@ const BottomNavigator: React.FC = () => {
         component={SearchScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={search} style={{ tintColor: color }} />
+            <Icon
+              source={require('../../../assets/navigation/search.svg')}
+              style={{ tintColor: color }}
+            />
           ),
         }}
       />
@@ -59,7 +67,10 @@ const BottomNavigator: React.FC = () => {
         component={MyPageNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={myPage} style={{ tintColor: color }} />
+            <Icon
+              source={require('../../../assets/navigation/mypage.svg')}
+              style={{ tintColor: color }}
+            />
           ),
         }}
       />
