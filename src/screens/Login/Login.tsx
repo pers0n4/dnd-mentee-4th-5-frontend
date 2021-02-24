@@ -5,11 +5,7 @@ import ThemeView from '../../templates/ThemeView';
 
 const Login: React.FC = () => {
   return (
-    <ThemeView
-      style={{
-        flex: 1,
-      }}
-    >
+    <ThemeView>
       <LoginForm />
     </ThemeView>
   );

@@ -9,7 +9,7 @@ const DeleteAccount: React.FC = () => {
   const { colors } = useTheme();
 
   return (
-    <ThemeView style={{ flex: 1 }}>
+    <ThemeView>
       <View>
         <Text style={{ color: colors.text, textAlign: 'center' }}>
           술을 찾고 선택하는 즐거움{'\n'}콜리 계정을 탈퇴하시겠습니까?

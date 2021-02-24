@@ -5,7 +5,7 @@ import ThemeView from '../../templates/ThemeView';
 
 const AccountInfo: React.FC = () => {
   return (
-    <ThemeView style={{ flex: 1 }}>
+    <ThemeView>
       <AccountInfoForm />
     </ThemeView>
   );
