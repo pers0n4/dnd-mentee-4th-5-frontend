@@ -35,16 +35,14 @@ const LoginForm: React.FC = () => {
     <View style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
         <TextField
-          label="Username"
+          label="아이디"
           onChangeText={(text) => dispatch({ type: 'username', payload: text })}
-          placeholder="사용자명"
           type="username"
           value={state.username}
         />
         <TextField
-          label="Password"
+          label="패스워드"
           onChangeText={(text) => dispatch({ type: 'password', payload: text })}
-          placeholder="비밀번호"
           type="password"
           value={state.password}
         />
