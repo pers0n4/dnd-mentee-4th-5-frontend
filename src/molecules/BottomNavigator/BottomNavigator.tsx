@@ -2,9 +2,9 @@ import styled from '@emotion/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
-import { main, myPage, search, wishList } from '../../../assets/images';
+import { favorite, home, myPage, search } from '../../../assets/navigation';
 import FavoriteScreen from '../../screens/Favorite';
-import MainScreen from '../../screens/Main';
+import HomeScreen from '../../screens/Home';
 import MyPageScreen from '../../screens/MyPage';
 import SearchScreen from '../../screens/Search';
 
@@ -28,11 +28,11 @@ const BottomNavigator: React.FC = () => {
       }}
     >
       <Tab.Screen
-        name="메인"
-        component={MainScreen}
+        name="홈"
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={main} style={{ tintColor: color }} />
+            <Icon source={home} style={{ tintColor: color }} />
           ),
         }}
       />
@@ -41,7 +41,7 @@ const BottomNavigator: React.FC = () => {
         component={FavoriteScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={wishList} style={{ tintColor: color }} />
+            <Icon source={favorite} style={{ tintColor: color }} />
           ),
         }}
       />
