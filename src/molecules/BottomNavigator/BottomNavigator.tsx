@@ -2,11 +2,10 @@ import styled from '@emotion/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
-import { main, myPage, search, wishList } from '../../../assets/images';
 import FavoriteScreen from '../../screens/Favorite';
-import MainScreen from '../../screens/Main';
-import MyPageScreen from '../../screens/MyPage';
+import HomeScreen from '../../screens/Home';
 import SearchScreen from '../../screens/Search';
+import MyPageNavigator from '../MyPageNavigator';
 
 const Icon = styled.Image({
   width: 23,
@@ -28,11 +27,14 @@ const BottomNavigator: React.FC = () => {
       }}
     >
       <Tab.Screen
-        name="메인"
-        component={MainScreen}
+        name="홈"
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={main} style={{ tintColor: color }} />
+            <Icon
+              source={require('../../../assets/navigation/home.svg')}
+              style={{ tintColor: color }}
+            />
           ),
         }}
       />
@@ -41,7 +43,10 @@ const BottomNavigator: React.FC = () => {
         component={FavoriteScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={wishList} style={{ tintColor: color }} />
+            <Icon
+              source={require('../../../assets/navigation/favorite.svg')}
+              style={{ tintColor: color }}
+            />
           ),
         }}
       />
@@ -50,16 +55,22 @@ const BottomNavigator: React.FC = () => {
         component={SearchScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={search} style={{ tintColor: color }} />
+            <Icon
+              source={require('../../../assets/navigation/search.svg')}
+              style={{ tintColor: color }}
+            />
           ),
         }}
       />
       <Tab.Screen
         name="마이페이지"
-        component={MyPageScreen}
+        component={MyPageNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon source={myPage} style={{ tintColor: color }} />
+            <Icon
+              source={require('../../../assets/navigation/mypage.svg')}
+              style={{ tintColor: color }}
+            />
           ),
         }}
       />

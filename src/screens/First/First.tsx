@@ -14,7 +14,6 @@ const First: React.FC<Props> = ({ navigation }) => {
   return (
     <ThemeView
       style={{
-        flex: 1,
         alignItems: 'center',
       }}
     >

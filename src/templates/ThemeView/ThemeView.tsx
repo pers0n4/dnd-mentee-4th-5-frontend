@@ -12,9 +12,9 @@ const Container = styled.View(({ theme }) => ({
 
 interface Props extends ViewProps {}
 
-const ThemeView: React.FC<Props> = ({ children, ...props }) => {
+const ThemeView: React.FC<Props> = ({ children, style, ...props }) => {
   return (
-    <Container {...props}>
+    <Container style={Object.assign({ flex: 1 }, style)} {...props}>
       <StatusBar style="inverted" />
       {children}
     </Container>

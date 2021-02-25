@@ -1,14 +1,15 @@
 import { useTheme } from '@emotion/react';
 import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
-import { Alert, Text, View } from 'react-native';
+import { Alert, GestureResponderEvent, Text, View } from 'react-native';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 
 interface Props {
   text: string;
+  onPress?: (event: GestureResponderEvent) => void;
 }
 
-const MenuItem: React.FC<Props> = ({ text }) => {
+const MenuItem: React.FC<Props> = ({ text, onPress }) => {
   const { colors } = useTheme();
 
   return (
@@ -20,7 +21,7 @@ const MenuItem: React.FC<Props> = ({ text }) => {
         marginHorizontal: -16,
         paddingHorizontal: 16,
       }}
-      onPress={() => Alert.alert(text)}
+      onPress={onPress}
     >
       <View
         style={{
