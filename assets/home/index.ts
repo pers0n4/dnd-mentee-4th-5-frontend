@@ -11,3 +11,4 @@ export const jinro = require('./jinro.png');
 export const lucente = require('./lucente.png');
 export const pick = require('./pick.png');
 export const seoulNight = require('./seoulNight.png');
+export const star = require('./star.png');
