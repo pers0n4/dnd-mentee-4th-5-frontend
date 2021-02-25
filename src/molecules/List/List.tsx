@@ -1,27 +1,31 @@
 import styled from '@emotion/native';
-import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
+import { View } from 'react-native';
+
+import { star } from '../../../assets/home';
 
 const Container = styled.View`
+  width: 100%;
   display: flex;
   flex-direction: row;
   background-color: ${({ theme }) => theme.colors.background};
   border-top-width: thin;
   border-top-color: rgba(211, 211, 211, 0.55);
 `;
-const Image = styled.View`
+const Image = styled.Image`
   width: 67pt;
   height: 67pt;
   border-radius: 6pt;
   align-self: center;
   margin-right: 12pt;
   margin-left: 16pt;
-  background-color: white;
+  object-fit: contain;
 `;
 const TextContainer = styled.View`
   height: 87pt;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 10pt 0pt;
 `;
 const Title = styled.Text`
   font-size: 15pt;
@@ -32,8 +36,12 @@ const StarRating = styled.View`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 2pt;
-  margin-bottom: 7pt;
+`;
+const Star = styled.Image`
+  width: 12pt;
+  height: 12pt;
+  align-self: center;
+  object-fit: contain;
 `;
 const Rating = styled.Text`
   margin-left: 5.5pt;
@@ -42,31 +50,36 @@ const Rating = styled.Text`
   color: rgb(141, 141, 147);
 `;
 const Hashtag = styled.Text`
+  width: fit-content;
+  margin-right: 5pt;
+  padding: 3pt;
+  border-width: 1pt;
+  border-radius: 23pt;
+  border-color: ${({ theme }) => theme.colors.border};
+  align-content: center;
   font-size: 9pt;
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.card};
 `;
 
 interface Props {
+  source: string;
   title: string;
-  rating: number;
-  hashtag?: string;
 }
 
-const List: React.FC<Props> = ({ title, rating, hashtag }) => {
+const List: React.FC<Props> = ({ source, title }) => {
   return (
     <Container>
-      <Image />
+      <Image source={{ uri: source }} />
       <TextContainer>
         <Title>{title}</Title>
         <StarRating>
-          <Ionicons
-            name="star"
-            style={{ color: 'rgb(255, 235, 0)' }}
-            size={12.5}
-          />
-          <Rating>{rating}</Rating>
+          <Star source={star} />
+          <Rating>4.5</Rating>
         </StarRating>
-        <Hashtag>{hashtag}</Hashtag>
+        <View style={{ flexDirection: 'row' }}>
+          <Hashtag>이게 플렉스</Hashtag>
+          <Hashtag>혼술에 추천</Hashtag>
+        </View>
       </TextContainer>
     </Container>
   );
