@@ -1,0 +1,13 @@
+export const apsolut = require('./apsolut.png');
+export const bigBend = require('./bigBend.png');
+export const bigWave = require('./bigWave.png');
+export const bosio = require('./bosio.png');
+export const fresh = require('./fresh.png');
+export const guinness = require('./guinness.png');
+export const jackDaniels = require('./jackDaniels.png');
+export const jager = require('./jager.png');
+export const jejuSlice = require('./jejuSlice.png');
+export const jinro = require('./jinro.png');
+export const lucente = require('./lucente.png');
+export const pick = require('./pick.png');
+export const seoulNight = require('./seoulNight.png');
