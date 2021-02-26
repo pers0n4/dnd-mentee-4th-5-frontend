@@ -37,14 +37,36 @@ const navigationTheme = {
   },
 };
 
+type User = {
+  user_name: string;
+  description: string;
+  access_token: string;
+};
+
+const initialState: User = {
+  user_name: '',
+  description: '',
+  access_token: '',
+};
+
+const AuthContext = React.createContext<
+  [user: User, dispatch: React.Dispatch<React.SetStateAction<User>>]
+>([initialState, () => ({})]);
+
 const App: React.FC = () => {
+  const [state, dispatch] = React.useState(initialState);
+
   return (
-    <ThemeProvider theme={theme}>
-      <NavigationContainer theme={navigationTheme}>
-        <StackNavigator />
-      </NavigationContainer>
-    </ThemeProvider>
+    <AuthContext.Provider value={[state, dispatch]}>
+      <ThemeProvider theme={theme}>
+        <NavigationContainer theme={navigationTheme}>
+          <StackNavigator />
+        </NavigationContainer>
+      </ThemeProvider>
+    </AuthContext.Provider>
   );
 };
 
 export default App;
+
+export const useAuthContext = () => React.useContext(AuthContext);
