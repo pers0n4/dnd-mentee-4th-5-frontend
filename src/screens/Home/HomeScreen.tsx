@@ -65,7 +65,13 @@ const HomeScreen: React.FC = () => {
       </View>
       <Text style={{ marginBottom: 40, fontSize: 19 }}>ABSOLUT VODKA</Text>
       {DRINKS.map((v) => (
-        <List source={v.image} title={v.title} key={v.image} />
+        <List
+          key={v.image}
+          style=""
+          source={v.image}
+          title={v.title}
+          visible={false}
+        />
       ))}
     </ThemeScrollView>
   );
