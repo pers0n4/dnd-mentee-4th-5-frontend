@@ -8,17 +8,17 @@ import ThemeView from '../../templates/ThemeView';
 
 const Container = styled.View`
   width: 90%;
-  height: fit-content;
-  padding: 20pt 16pt;
+  /* height: fit-content; */
+  padding: 20px 16px;
   justify-content: center;
   align-self: center;
-  border-radius: 13pt;
+  border-radius: 13px;
   background-color: rgb(44, 44, 46);
 `;
 const Total = styled.Text`
-  margin-bottom: 15pt;
-  font-size: 13pt;
-  line-height: 20pt;
+  margin-bottom: 15px;
+  font-size: 13px;
+  line-height: 20px;
   color: rgb(232, 232, 238);
 `;
 

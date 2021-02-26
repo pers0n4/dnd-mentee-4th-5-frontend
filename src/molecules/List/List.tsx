@@ -64,10 +64,10 @@ const Hashtag = styled.Text`
   color: ${({ theme }) => theme.colors.card};
 `;
 const Likes = styled.Image`
-  width: 28.6pt;
-  height: 24.6pt;
+  width: 28.6px;
+  height: 24.6px;
   position: absolute;
-  right: 16pt;
+  right: 16px;
 `;
 
 interface Props {
