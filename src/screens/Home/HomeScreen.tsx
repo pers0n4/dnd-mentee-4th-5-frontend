@@ -48,7 +48,7 @@ const Pick = styled.Image`
 `;
 const Text = styled.Text`
   text-align: center;
-  font-size: 14pt;
+  font-size: 14px;
   color: rgb(232, 232, 238);
 `;
 
@@ -58,7 +58,6 @@ const HomeScreen: React.FC = () => {
   return (
     <ThemeScrollView>
       <CategorySelector />
-      <Pick source={homeImg.pick} />
       <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
         <Text>오늘의 원픽</Text>
         <Text style={{ color: colors.primary }}>.</Text>

@@ -12,27 +12,27 @@ const Container = styled.View`
   flex-direction: row;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background};
-  border-top-width: thin;
+  /* border-top-width: thin; */
   border-top-color: rgba(211, 211, 211, 0.55);
 `;
 const Image = styled.Image`
-  width: 67pt;
-  height: 67pt;
-  border-radius: 6pt;
+  width: 67px;
+  height: 67px;
+  border-radius: 6px;
   align-self: center;
-  margin-right: 12pt;
-  margin-left: 16pt;
-  object-fit: contain;
+  margin-right: 12px;
+  margin-left: 16px;
+  /* object-fit: contain; */
 `;
 const TextContainer = styled.View`
-  height: 87pt;
+  height: 87px;
   display: flex;
   justify-content: space-between;
-  padding: 10pt 0pt;
+  padding: 10px 0px;
 `;
 const Title = styled.Text`
-  font-size: 15pt;
-  line-height: 20pt;
+  font-size: 15px;
+  line-height: 20px;
   color: white;
 `;
 const StarRating = styled.View`
@@ -41,26 +41,26 @@ const StarRating = styled.View`
   align-items: center;
 `;
 const Star = styled.Image`
-  width: 12pt;
-  height: 12pt;
+  width: 12px;
+  height: 12px;
   align-self: center;
-  object-fit: contain;
+  /* object-fit: contain; */
 `;
 const Rating = styled.Text`
-  margin-left: 5.5pt;
-  font-size: 13pt;
-  line-height: 20pt;
+  margin-left: 5.5px;
+  font-size: 13px;
+  line-height: 20px;
   color: rgb(141, 141, 147);
 `;
 const Hashtag = styled.Text`
-  width: fit-content;
-  margin-right: 5pt;
-  padding: 3pt;
-  border-width: 1pt;
-  border-radius: 23pt;
+  /* width: fit-content; */
+  margin-right: 5px;
+  padding: 3px;
+  border-width: 1px;
+  border-radius: 23px;
   border-color: ${({ theme }) => theme.colors.border};
   align-content: center;
-  font-size: 9pt;
+  font-size: 9px;
   color: ${({ theme }) => theme.colors.card};
 `;
 const Likes = styled.Image`
@@ -80,7 +80,7 @@ interface Props {
 const List: React.FC<Props> = ({ source, style, title, visible }) => {
   return (
     <Container style={style}>
-      <Image source={{ uri: source }} />
+      {/* <Image source={{ uri: source }} /> */}
       <TextContainer>
         <Title>{title}</Title>
         <StarRating>

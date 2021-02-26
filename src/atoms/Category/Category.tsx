@@ -2,18 +2,18 @@ import styled from '@emotion/native';
 import React from 'react';
 
 const ButtonContainer = styled.TouchableHighlight`
-  width: fit-content;
+  /* width: fit-content; */
   justify-content: center;
-  margin: 14pt 0pt;
-  padding: 5pt 10pt;
-  border-radius: 36pt;
+  margin: 14px 0px;
+  padding: 5px 10px;
+  border-radius: 36px;
   background-color: ${({ theme }) => theme.colors.background};
 `;
 const ButtonText = styled.Text`
   text-align: center;
-  size: 16pt;
-  line-height: 19pt;
-  letter-spacing: -0.16pt;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.16px;
   color: white;
 `;
 
