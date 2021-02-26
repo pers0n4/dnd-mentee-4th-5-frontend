@@ -15,12 +15,12 @@ const MenuItem: React.FC<Props> = ({ text, onPress }) => {
   return (
     <TouchableHighlight
       underlayColor="rgba(255, 255, 255, 0.1)"
-      // style={{
-      //   height: 80,
-      //   justifyContent: 'center',
-      //   marginHorizontal: -16,
-      //   paddingHorizontal: 16,
-      // }}
+      style={{
+        height: 80,
+        justifyContent: 'center',
+        marginHorizontal: -16,
+        paddingHorizontal: 16,
+      }}
       onPress={onPress}
     >
       <View
@@ -31,9 +31,9 @@ const MenuItem: React.FC<Props> = ({ text, onPress }) => {
         }}
       >
         <View>
-          {/* <Text style={{ color: colors.text, fontSize: 20 }}>{text}</Text> */}
+          <Text style={{ color: colors.text, fontSize: 20 }}>{text}</Text>
         </View>
-        {/* <Ionicons name="chevron-forward" size={18} color={colors.card} /> */}
+        <Ionicons name="chevron-forward" size={18} color={colors.card} />
       </View>
     </TouchableHighlight>
   );
