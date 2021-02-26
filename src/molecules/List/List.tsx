@@ -2,12 +2,15 @@ import styled from '@emotion/native';
 import React from 'react';
 import { View } from 'react-native';
 
+import * as likes from '../../../assets/favorite';
 import { star } from '../../../assets/home';
 
 const Container = styled.View`
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
   background-color: ${({ theme }) => theme.colors.background};
   border-top-width: thin;
   border-top-color: rgba(211, 211, 211, 0.55);
@@ -60,15 +63,23 @@ const Hashtag = styled.Text`
   font-size: 9pt;
   color: ${({ theme }) => theme.colors.card};
 `;
+const Likes = styled.Image`
+  width: 28.6pt;
+  height: 24.6pt;
+  position: absolute;
+  right: 16pt;
+`;
 
 interface Props {
+  style: any;
   source: string;
   title: string;
+  visible: boolean;
 }
 
-const List: React.FC<Props> = ({ source, title }) => {
+const List: React.FC<Props> = ({ source, style, title, visible }) => {
   return (
-    <Container>
+    <Container style={style}>
       <Image source={{ uri: source }} />
       <TextContainer>
         <Title>{title}</Title>
@@ -81,6 +92,7 @@ const List: React.FC<Props> = ({ source, title }) => {
           <Hashtag>혼술에 추천</Hashtag>
         </View>
       </TextContainer>
+      {visible && <Likes source={likes.like} />}
     </Container>
   );
 };
